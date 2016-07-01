@@ -1,0 +1,265 @@
+html {
+	background-color: #1F3240;
+	color: #FFFFFF;
+	height: 100%;
+	width: 100%;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.title {
+	font-family: "Lucida Console", Monaco, monospace;
+	height: 310px;
+	font-size: 1.5em;
+	position: fixed;
+	text-align: center;
+	left: 50%;
+	margin-top: 25px;
+	transform: translateX(-50%);
+	width: 550px;
+	z-index: 100;
+}
+
+.getzip {
+	height: 50px;
+	position: relative;
+	left: 50%;
+	text-align: left;
+	transform: translateX(-50%);
+	width: 225px;
+}
+
+.zipfield {
+	background-color: #BBC2C8;
+	border-radius: 10px;
+	font-size: 1em;
+	height: 25px;
+	margin-bottom: 25px;
+	text-align: center;
+	width: 100px;
+}
+
+.info {
+	margin: 0 auto;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+#city {
+	text-align: center;
+}
+
+/* Rain */
+.rain {
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	background: #314158;
+	background: -webkit-linear-gradient(#747B85, #314158);
+	background: -moz-linear-gradient(#747B85, #314158);
+	background: -o-linear-gradient(#747B85, #314158);
+	background: linear-gradient(#747B85, #314158);
+	margin: -10px;
+}
+
+.drop {
+	background: -webkit-linear-gradient(#EDEDED, #747B85);
+	background: -moz-linear-gradient(#EDEDED, #747B85);
+	background: -o-linear-gradient(#EDEDED, #747B85);
+	background: linear-gradient(#EDEDED, #747B85);
+	width: 1px;
+	height: 89px;
+	position: absolute;
+	bottom: 200px;
+	-webkit-animation: fall .63s linear infinite;
+	-moz-animation: fall .63s linear infinite;
+	animation: fall .63s linear infinite;
+}
+
+/* Snow */
+.snow {
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	background: #314158;
+	background: -webkit-linear-gradient(#747B85, #314158);
+	background: -moz-linear-gradient(#747B85, #314158);
+	background: -o-linear-gradient(#747B85, #314158);
+	background: linear-gradient(#747B85, #314158);
+	margin: -10px;
+}
+
+.flake {
+	background: -webkit-linear-gradient(#EDEDED, #747B85);
+	background: -moz-linear-gradient(#EDEDED, #747B85);
+	background: -o-linear-gradient(#EDEDED, #747B85);
+	background: linear-gradient(#EDEDED, #747B85);
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	bottom: 200px;
+	-webkit-animation: flakes 10s linear infinite;
+	-moz-animation: flakes 10s linear infinite;
+}
+
+/* Lightning flashes */
+.lightning {
+		animation: flash 0.3s 2 ease;
+}
+
+.clouds {
+	display: none;
+	margin: -10px;
+	height: 100vh;
+	width: 100vw;
+	background-image: radial-gradient(ellipse farthest-corner at 30px 30px, #E0DFE5 0%, #7E818A 25%, #484848 50%, #17171F 95%);
+} 
+
+.sun {
+	display: none;
+	height: 100vh;
+	width: 100vw;
+	margin: -10px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-color: #1E647E;
+	background: -webkit-linear-gradient(#011B3E, #1E647E, #9EB0A0, #FCCC82);
+	background: -moz-linear-gradient(#011B3E, #1E647E, #9EB0A0, #FCCC82);
+	background: -o-linear-gradient(#011B3E, #1E647E, #9EB0A0, #FCCC82);
+	background: linear-gradient(#011B3E, #1E647E, #9EB0A0, #FCCC82);
+	z-index: -1;
+}
+
+.svg-sun {
+	width: 350px;
+	height: 350px;
+	position: fixed;
+	display: block;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 250px;
+	-webkit-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+	-moz-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+	-o-animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+	-ms-animation: spin 25s linear infinite, sun-glow 3s 0s ease-in-out infinite;
+	animation: spin 25s linear infinite, sun-glow 3s 0s linear infinite;
+}
+
+
+/* the circle element in the svg itself */
+
+#sun {
+	stroke-width: 10;
+	stroke-dasharray: 2;
+	stroke-dashoffset: 2;
+}
+
+@-webkit-keyframes sun-glow {
+	0% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+	50% {
+		fill: #e67e22;
+		stroke: #e67e22;
+	}
+	100% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+}
+
+@-moz-keyframes sun-glow {
+	0% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+	50% {
+		fill: #e67e22;
+		stroke: #e67e22;
+	}
+	100% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+}
+
+@-o-keyframes sun-glow {
+	0% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+	50% {
+		fill: #e67e22;
+		stroke: #e67e22;
+	}
+	100% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+}
+
+@keyframes sun-glow {
+	0% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+	50% {
+		fill: #e67e22;
+		stroke: #e67e22;
+	}
+	100% {
+		fill: #f1c40f;
+		stroke: #f1c40f;
+	}
+}
+
+
+/* animate the snow*/
+
+@-webkit-keyframes flakes {
+	to {
+		margin-top: 900px;
+	}
+}
+
+@-moz-keyframes flakes {
+	to {
+		margin-top: 900px;
+	}
+}
+
+@keyframes flakes {
+	to {
+		margin-top: 900px;
+	}
+}
+
+/* animate the drops*/
+
+@-webkit-keyframes fall {
+	to {
+		margin-top: 900px;
+	}
+}
+
+@-moz-keyframes fall {
+	to {
+		margin-top: 900px;
+	}
+}
+
+@keyframes fall {
+	to {
+		margin-top: 900px;
+	}
+}
+
+@keyframes flash {
+	to {
+		background: linear-gradient(#FFFFFF, #FFFFFF);
+	}
+}
